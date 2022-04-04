@@ -1,53 +1,44 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
+import 'package:islamic_app/provider/category_list.dart';
 
-class CatagoryModel with ChangeNotifier {
-  String name;
-  String image;
-  bool? isFavorite;
+class Catagory1 with ChangeNotifier {
 
-  CatagoryModel({
-    required this.name,
-    required this.image,
-    this.isFavorite,
-  });
-
-  List<CatagoryModel> list = [
+   List<CatagoryModel> _list = [
     CatagoryModel(
-      name: 'pink khemar',
-      image: 'https://www.poran.com.bd/wp-content/uploads/2021/09/name-3-1-500x500.jpg',
-
+      name: 'pink Hijab',
+      image: 'images/muhammad-faiz-zulkeflee-KrR7xEn4HV8-unsplash 1.png',
     ),
     CatagoryModel(
-      name: 'pink khemar',
-      image: 'https://www.poran.com.bd/wp-content/uploads/2021/09/name-3-1-500x500.jpg',
+      name: 'Off white Hijab',
+      image: 'images/yusron-el-jihan-YoC92_GCSvQ-unsplash 1.png',
     ),
     CatagoryModel(
-      name: 'pink khemar',
-      image: 'https://www.poran.com.bd/wp-content/uploads/2021/09/name-3-1-500x500.jpg',
+      name: 'Sing tupi',
+      image: 'images/surinder-pal-singh-eJNB3-ZlxJg-unsplash 1.png',
     ),
     CatagoryModel(
-      name: 'pink khemar',
-      image: 'https://www.poran.com.bd/wp-content/uploads/2021/09/name-3-1-500x500.jpg',
+      name: 'White Dupatta',
+      image: 'images/khaled-ghareeb-xZSEvSlHRv8-unsplash 1.png',
     ),
     CatagoryModel(
-      name: 'pink khemar',
-      image: 'https://www.poran.com.bd/wp-content/uploads/2021/09/name-3-1-500x500.jpg',
+      name: 'White Abakaba',
+      image: 'images/artur-aldyrkhanov-RnyZVY9KDNE-unsplash 1.png',
     ),
     CatagoryModel(
-      name: 'pink khemar',
-      image: 'https://www.poran.com.bd/wp-content/uploads/2021/09/name-3-1-500x500.jpg',
+      name: 'Kids Abaya',
+      image: 'images/andre-mouton-cipTIkvvjio-unsplash 1.png',
     ),
   ];
+  //
+  // void setFavourite(int index) {
+  //   // isFavourite=!isFavourite;
+  //   list[index].isFavorite = list[index].isFavorite;
+  //   notifyListeners();
+  // }
 
-  void setFavourite(int index) {
-    // isFavourite=!isFavourite;
-    list[index].isFavorite = list[index].isFavorite;
-    notifyListeners();
-  }
-
-  List<CatagoryModel> get getList {
-    return list;
+  List<CatagoryModel> get item {
+    return [..._list];
   }
 
   void setProductDetailData(
